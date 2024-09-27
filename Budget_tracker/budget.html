@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="budget.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Tracker</h1>
+        <div class="budget-form">
+            <label for="budget">Set Budget:</label>
+            <input type="number" id="budget" placeholder="Enter your budget">
+            <button onclick="setBudget()">Set</button>
+        </div>
+        <div class="expense-form">
+            <label for="expenseName">Expense Name:</label>
+            <input type="text" id="expenseName" placeholder="Enter expense name">
+            <label for="expenseAmount">Expense Amount:</label>
+            <input type="number" id="expenseAmount" placeholder="Enter expense amount">
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <div class="summary-box">
+            <h2>Summary</h2>
+            <p>Total Budget: <span id="totalBudget">₹0.00</span></p>
+            <p>Sum of Expenses: <span id="totalExpenses">₹0.00</span></p>
+            <p>Current Balance: <span id="currentBalance">₹0.00</span></p>
+        </div>
+        <div class="transaction-history">
+            <h2>Transaction History</h2>
+            <ul id="transactionList"></ul>
+        </div>
+    </div>
+    <script src="budget.js"></script>
+</body>
+</html>
